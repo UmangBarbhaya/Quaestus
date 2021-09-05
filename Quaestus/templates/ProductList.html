@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>QUAESTUS</title>
+    <link rel="icon" href="images/Logo.png" type="image/gif" sizes="16x16">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static', filename='images/Logo.png') }}" rel="icon" type="image/gif" sizes="16x16">
+  
+</head>
+   <body>
+    <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="http://localhost:5000" class="brand-logo"><img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Quaestus" style="width:130px;"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="http://localhost:5000">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="http://localhost:5000">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+    
+    <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{{ url_for('static', filename='images/baby lolipop.jpg') }}"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Quaestus: Another Online Marketplace</h3>
+          <h5 class="light grey-text text-lighten-3">Enriching your Buying and Selling Experience.</h5>
+        </div>
+      </li>
+      
+    </ul>
+  </div>
+
+	 
+	  <div class="row">
+	  
+        <center><h4>Products List</h4></center>
+		 {% for row in rows %}
+		<div class="col s12 m3">
+	  <div class="card">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='images/baby_elephant.jpg') }}" width=150 height=250>
+              <span class="card-title">{{row["Product_Name"]}}</span>
+            </div>
+            <div class="card-content">
+              <p>PRICE:{{row['Product_Price']}}</p>
+            </div>
+            <div class="card-action">
+              <a href="http://127.0.0.1:5000/ProductDisplay/{{row['Product_ID']}}">More</a>
+            </div>
+          </div>
+     </div>
+	 {% endfor %}
+	 </div>
+		<footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Copyright@ <a class="brown-text text-lighten-3" href="http://materializecss.com">Quaestus</a>
+      </div>
+    </div>
+  </footer>
+	  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{url_for('static',filename='js/materialize.js')}}"></script>
+  <script src="{{url_for('static',filename='js/init.js')}}"></script>
+   </body>
+</html>

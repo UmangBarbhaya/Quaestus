@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>QUAESTUS</title>
+    <link rel="icon" href="images/Logo.png" type="image/gif" sizes="16x16">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    
+    
+<!---navbar--->
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="Quaestus.html" class="brand-logo"><img src="images/Logo.png" alt="Quaestus" style="width:130px;"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+    
+    
+    
+    
+<!---parallax-start--->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        
+        
+<!--parallax_part1-->        
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">QUAESTUS</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Another Online MarketPlace</h5>
+        </div>
+          
+          
+        <div class="row center">
+            
+<!--Modal Login-->
+            <a class="waves-effect waves-light btn modal-trigger" href="#login-button" id="login-button1">LOGIN</a>
+              <!-- Modal Structure -->
+              <div id="login-button" class="modal modal-fixed-footer card-panel">
+                <div class="modal-content">
+<!--Customer-->                    
+                      <ul id="tabs-swipe-demo" class="tabs">
+                        <li class="tab col s6"><a class="active black white-text" href="#test-swipe-1">CUSTOMER</a></li>
+                        <li class="tab col s6"><a class="white black-text" href="#test-swipe-2">SELLER</a></li>
+                      </ul>
+                    
+                      <div id="test-swipe-1" class="col s12 black" style="width:100%;height:100%;">
+                          <p style="padding=5px"></p>
+                           <span class="white-text text-lighten-2">
+                                <h5>Enter Username and Password</h5>
+                                <p style="padding:10px"></p>
+                                <div class="row">
+                                    <form class="col s12" action="customerProductList.html">
+
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input placeholder="Enter Username" id="first_name" type="text" class="validate"  required>
+                                                <label for="User_name">User Name</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input placeholder="Enter Password" id="password" type="password" class="validate"  required>
+                                                <label for="password">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        <button class="btn waves-effect waves-light white black-text" type="submit" name="action">Submit
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </span>
+                    </div>
+                    
+<!--Seller-->                    
+                      <div id="test-swipe-2" class="col s12 white" style="width:100%;height:100%;">
+                          <p style="padding=5px"></p>
+                           <span class="black-text text-lighten-2">
+                                <h5>Enter Username and Password</h5>
+                                <p style="padding:10px"></p>
+                                <div class="row">
+                                    <form class="col s12" action="sellerProductList.html">
+
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input placeholder="Enter Username" id="first_name" type="text" class="validate" required>
+                                                <label for="User_name">User Name</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input placeholder="Enter Password" id="password" type="password" class="validate" required>
+                                                <label for="password">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        <button class="btn waves-effect waves-light black white-text" type="submit" name="action" href="sellerProductList.html">Submit
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </span>
+                          
+                    </div>
+                </div>
+              </div>
+            
+            
+<!--Modal Sign up-->
+            <a class="waves-effect waves-light btn modal-trigger" href="#sign-button" id="sign-button1">Sign Up</a>
+              <!-- Modal Structure -->
+              <div id="sign-button" class="modal modal-fixed-footer card-panel">
+                <div class="modal-content">
+                    <span class="black-text text-darken-2">
+                  <h4>Sign up Form!</h4>
+                  <p>Please fill up the following initial Details!</p>
+                        <button class="w3-btn w3-blue" onclick="getLocation()">Try It</button>
+                        <p id="demo"></p>
+                    </span>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">I Agree</a>
+                </div>
+              </div>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="images/background1.jpeg" alt="Unsplashed background img 1" style="width:500px;height:600px;"></div>
+  </div>
+
+    
+    
+<!--parallax_part2-->  
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Product Recommendation</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a list of products that you would like to buy.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">local_grocery_store</i></h2>
+            <h5 class="center">Vast Range of Products</h5>
+
+            <p class="light">We offer a large range of products that you can Choose, Buy, Save it into basket and comment on that.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Inventory Management</h5>
+
+            <p class="light">Manage your inventory and check stock levels in real-time. Receive low inventory notifications and generate purchase orders to replenish your stock</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    
+    
+<!--parallax_part3-->  
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Quaestus: The marketplace for your needs</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/baby_sweater.jpg" alt="Unsplashed background img 2" style="width:500px;height:600px;"></div>
+  </div>
+<!--parallax_part4-->  
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+            <p class="center-align light">Thanks for using Quaestus: Another Online MarketPlace! We are here to provide you with more information, answer any questions and create an effective solution for your instructional needs.</p>
+            <p class="center-align light" style="padding-top:10px;">For Support or any Queries:</p>
+            <p class="center-align light" style="padding:0px;">Email us at <a href="https://mail.google.com/">support@quaestus.com</a>.</p> 
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    
+    
+    
+<!--parallax_part5-->  
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Quaestus: The marketplace for your needs</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/baby lolipop.jpg" alt="Unsplashed background img 3" style="width:500px;height:600px;"></div>
+  </div>
+    
+    
+    
+<!--footer-->  
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Copyright@ <a class="brown-text text-lighten-3" href="http://materializecss.com">Quaestus</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+    <script src="js/signinit.js"></script>
+    <script src="js/logininit.js"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU"></script>
+    <script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+  </body>
+</html>
